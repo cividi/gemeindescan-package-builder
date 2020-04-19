@@ -1,0 +1,31 @@
+legends:
+    "sample-hr-adressen":
+        "Gebäude mit Handelsregistereintrag":
+            fillColor: "#93bddf"
+            fillOpacity: 1
+            stroke: "#000000"
+            strokeWidth: 2
+            strokeOpacity: 1
+
+snapshots:
+    - sample-hr-adressen:
+        title: "Gebäude mit Handelsregistereinträgen"
+        description: "Gebäude mit Adressen, die mindestens einen Handelsregistereintrag aufweisen."
+        keywords:
+            - sample
+        gemeindescan_meta:
+            topic: "Struktur"
+        bounds:
+            - "geo:47.073023,8.359509"
+            - "geo:47.076802,8.365662"
+        resources:
+            - "sample-hr-adressen":
+                mediatype: "application/geo+json"
+        sources:
+            - 
+                url: "https://www.housing-stat.ch"
+                title: "Handelsregistereinträge: Handelsregister Kanton Luzern"
+            - 
+                url: "https://rawi.lu.ch/themen/amtliche_vermessung"
+                title: "Bodenbedeckung, Amtliche Vermessung, Kanton Luzern"
+        attribution: ""
