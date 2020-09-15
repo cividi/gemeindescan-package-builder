@@ -8,6 +8,27 @@ Simple adapt the `template.yml` to capture your default settings for a single sn
 
 Then copy the `sample-project`, add your styled geojsons (according to the simplestyles spec) in `project/data/` and add your snapshot metadata in the `project.yml`. Then just run `python package-builder.py` after changing `project` to your folder/yml file name. For more destails refer to the spec description below.
 
+```sh
+export PROJECT=project
+mkdir $PROJECT && mkdir $PROJECT/data && mkdir $PROJECT/snapshots
+cp sample-project/sample-project.yml $PROJECT/$PROJECT.yml
+
+# Edit new .yml, add data
+
+pip install -r requirements.txt
+python package-builder.py -p $PROJECT
+```
+
+## CLI options
+
+Run
+
+```sh
+python package-builder.py --help
+```
+
+to see available options.
+
 ## project.yml Spec
 
 ### legends
