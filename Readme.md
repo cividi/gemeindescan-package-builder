@@ -29,6 +29,19 @@ python package-builder.py --help
 
 to see available options.
 
+## Makefile
+
+```sh
+
+export PROJECT="project"
+make init
+
+# Edit project/project.yml, add data, ...
+
+make
+
+``` 
+
 ## project.yml Spec
 
 ### legends
