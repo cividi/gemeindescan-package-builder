@@ -18,13 +18,13 @@ viewSpecKey = ["title","description","bounds","attribution"]
 dpSpecKey = ["title","description","version","datapackage_version","gemeindescan_version","gemeindescan_meta","format","keywords","license","maintainers","contributors","sources"]
 
 with open("template.yml", 'r', encoding="utf-8") as tf:
-    template = yaml.load(tf)
+    template = yaml.safe_load(tf)
     dp_template = template["snapshot"]
     legend_template = template["legend"]
 
 with open(yml_file, 'r', encoding="utf-8") as fp:
     try:
-        projectData = yaml.load(fp)
+        projectData = yaml.safe_load(fp)
     except:
         print("❌ Project '"+project+"' YML ("+yml_file+") not found.")
     for entries in projectData["snapshots"]:
