@@ -1,10 +1,17 @@
-# Gemeindescan datapackage builder
+# Gemeindescan Data Package builder
 
-A simple tool to generate valid [Gemeindescan](https://bitbucket.org/cividi/gemeindescan-webui) datapackages.
-
-Simple adapt the `template.yml` to capture your default settings for a single snapshot and an entry in the legend.
+A template to generate valid [Gemeindescan](https://bitbucket.org/cividi/gemeindescan-webui) datapackages.
 
 ## Quick Start
+
+- add your styled geojsons (according to the simplestyles spec) in `project/data/`
+- add your snapshot metadata in the `project.yml`
+- install [YAML support](https://yaml.readthedocs.io/en/latest/install.html) using `python package-builder.py`
+- run `python package-builder.py` after changing `project` to your folder/yml file name. For more details refer to the spec description below.
+
+## Walkthrough
+
+Adapt the `template.yml` to capture your default settings for a single snapshot and an entry in the legend.
 
 Then copy the `sample-project`, add your styled geojsons (according to the simplestyles spec) in `project/data/` and add your snapshot metadata in the `project.yml`. Then just run `python package-builder.py` after changing `project` to your folder/yml file name. For more destails refer to the spec description below.
 
@@ -46,7 +53,7 @@ make
 
 ### legends
 
-This is where the legen entries live. The top level item has to match the resource name given in the snapshot resources, which is also what the geojson is called.
+This is where the Legends entries live. The top level item has to match the resource name given in the snapshot resources, which is also what the geojson is called.
 
 ```yml
 legends:
@@ -85,15 +92,15 @@ snapshots:
             - "sample-hr-adressen":
                 mediatype: "application/geo+json"
         sources:
-            - 
+            -
                 url: "https://www.housing-stat.ch"
                 title: "Handelsregistereinträge: Handelsregister Kanton Luzern"
-            - 
+            -
                 url: "https://rawi.lu.ch/themen/amtliche_vermessung"
                 title: "Bodenbedeckung, Amtliche Vermessung, Kanton Luzern"
         attribution: ""
         maintainers:
-            - 
+            -
                 name: "Luis Gisler"
                 web: "https://github.com/cividitech/"
 ```
